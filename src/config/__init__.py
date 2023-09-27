@@ -2,7 +2,8 @@ from pydantic import BaseSettings
 
 
 class Settings(BaseSettings):
-    pass
+    BASE_URL: str = "tdkgadisifoundation.com"
+    SECRET_KEY = "aaaa"
 
 
 def config_instance() -> Settings:
