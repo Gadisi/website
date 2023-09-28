@@ -128,34 +128,29 @@
             </div>
             <div class="col-lg-6">
                 <div class="about-image text-center mt-50 wow fadeInRightBig" data-wow-duration="1s" data-wow-delay="0.5s">
-                    <img src="{{ url_for('static', filename='images/about.jpg') }}" alt="about">
+                    <img src="{{ url_for('static', filename='images/about.jpg') }}" width="600" height="350" alt="about">
                 </div> <!-- about image -->
             </div>
         </div> <!-- row -->
     </div> <!-- container -->
 </section>
-
-    <section id="gallery" class="about-area pt-70">
-        <div class="container">
-            <div class="row">
-             <div class="gallery-container">
+<section id="gallery" class="about-image text-center mt-50 wow fadeInRightBig" data-wow-duration="3s" data-wow-delay="0.7s" style="visibility: visible; animation-duration: 3s; animation-delay: 0.5s; animation-name: fadeInRightBig;"">
+    <div class="container">
+        <div class="row">
+            <div class="gallery-container">
+                <h3 class="title"><span>TD & K</span> Gadisi Foundation Gallery</h3>
                 <div class="gallery">
-                    <div class="row">
+                    <!-- Your gallery images here -->
                         {% for image_filename in image_filenames %}
-                            <div class="col-lg-3 col-md-3 col-sm-12">
-                                <img src="{{ url_for('static', filename=image_filename) }}" width="600" height="350" alt="{{ NO }}">
+                            <div class="gallery-inner">
+                                <img src="{{ url_for('static', filename=image_filename) }}"  alt="{{ NO }}">
                             </div>
                         {% endfor %}
-                    </div>
                 </div>
-                <div class="gallery-navigation">
-                    <span class="prev-arrow">&#9664;</span>
-                    <span class="next-arrow">&#9654;</span>
-                </div>
-             </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <section id="values" class="services-area pt-120">
         <div class="container">
@@ -468,7 +463,6 @@
     <script src="{{ url_for('static', filename='js/wow.min.js') }}"></script>
     <script src="{{ url_for('static', filename='js/particles.min.js') }}"></script>
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
-
 </body>
 
 </html>
