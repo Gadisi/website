@@ -309,10 +309,6 @@
             </div> <!-- row -->
         </div> <!-- container -->
     </section>
-    <!--====== VIDEO COUNTER PART ENDS ======-->
-
-    <!--====== TEAM PART START ======-->
-
     <section id="team" class="team-area pt-120">
         <div class="container">
             <div class="row justify-content-center">
@@ -340,9 +336,9 @@
                         </div>
                         <div class="team-content">
                             <h5 class="holder-name"><a href="#">Sam Ratshivhanda</a></h5>
-                            <p class="text">Founder and CEO</p>
-                            <p class="text"><a href="tel:0795875693">Cell: 079 587 5693</a></p>
-                            <p class="text"><a href="mailto:sam@tdkgadisifoundation.com">sam@tdkgadisifoundation.com</a></p>
+                            <p class="text">Founder</p>
+                            <p class="text"><a href="tel:0795875693" class="font-weight-bold text-dark">079 587 5693</a></p>
+                            <p class="text"><a href="mailto:sam@tdkgadisifoundation.com" class="font-weight-bold text-dark">sam@tdkgadisifoundation.com</a></p>
                         </div>
                     </div> <!-- single team -->
                 </div>
@@ -361,9 +357,9 @@
                         </div>
                         <div class="team-content">
                             <h5 class="holder-name"><a href="#">Richard Takalani</a></h5>
-                            <p class="text">Community Liason</p>
-                            <p class="text"><a href="tel:0825134061">082 513 4061</a></p>
-                            <p class="text"><a href="mailto:takalani@tdkgadisifoundation.com">takalani@tdkgadisifoundation.com</a></p>
+                            <p class="text">Founder</p>
+                            <p class="text"><a href="tel:0825134061" class="font-weight-bold text-dark">082 513 4061</a></p>
+                            <p class="text"><a href="mailto:takalani@tdkgadisifoundation.com" class="font-weight-bold text-dark">takalani@tdkgadisifoundation.com</a></p>
                         </div>
 
                     </div> <!-- single team -->
@@ -396,8 +392,8 @@
                 <div class="row">
                     <div class="col-lg-4 col-md-6 col-sm-8">
                         <div class="footer-about mt-50 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
-                            <a class="logo" href="#">
-                                <img src="{{ url_for('static', filename='images/logo.jpg') }}" alt="logo" width="65" height="50">
+                            <a class="navbar-brand" href="{{ url_for('home.get_home') }}">
+                                <img src="{{ url_for('static', filename='images/logo.jpg') }}" alt="logo" width="80" height="50">
                             </a>
                             <p class="text">WE ARE COMMITTED TO HELPING OTHERS</p>
                             <ul class="social">
@@ -415,9 +411,9 @@
                                 <h4 class="title">Contact Us</h4>
                             </div>
                             <ul class="contact">
-                                <li>+2782 513 4061</li>
-                                <li>info@tdkgadisifoundation.com</li>
-                                <li>www.tdkgadisifoundation.com</li>
+                                <li><a href="tel:0825134061" class="font-weight-bold text-white">082 513 4061</a></li>
+                                <li><a href="mailto:info@tdkgadisifoundation.com" class="font-weight-bold text-white">info@tdkgadisifoundation.com</a></li>
+                                <li><a href="{{ url_for('home.get_home') }}" class="font-weight-bold text-white">https://tdkgadisifoundation.com</a></li>
                                 <li>581 Cedar Creek<br> First Road, Ext 8 Needwood, Gauteng 2021, South Africa</li>
                             </ul>
                         </div> <!-- footer contact -->
