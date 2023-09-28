@@ -16,7 +16,30 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/default.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script>
+        function getRandomIItem(arr) {
+              const randomIndex = Math.floor(Math.random() * arr.length);
+              return arr[randomIndex];
+        }
+        // Function to load an image
+        function loadImage() {
+            // Create a new image element
+            let img = new Image();
+            const images = ['images/gallery/image_1.jpg', 'images/gallery/image_2.jpg', 'images/gallery/image_3.jpg', 'images/gallery/image_4.jpg'];
+            // Set the source of the image
+            img.src = getRandomIItem(images); // Replace with your image URL
+            img.id = "galleryImage";
 
+            // Add the image to the image container
+            const imageContainer = document.getElementById("GalleryContainer");
+            imageContainer.innerHTML = ''; // Clear previous images
+            imageContainer.appendChild(img);
+        }
+
+        // Attach the click event handler to the button
+        const loadImageBtn = document.getElementById("galleryImage");
+        loadImageBtn.addEventListener("click", loadImage);
+    </script>
 </head>
 <body>
     <!--[if IE]>
@@ -128,7 +151,7 @@
             </div>
             <div class="col-lg-6">
                 <div class="about-image text-center mt-50 wow fadeInRightBig" data-wow-duration="1s" data-wow-delay="0.5s">
-                    <img src="{{ url_for('static', filename='images/about.jpg') }}" width="600" height="350" alt="about">
+                    <img  src="{{ url_for('static', filename='images/about.jpg') }}" width="600" height="350" alt="about">
                 </div> <!-- about image -->
             </div>
         </div> <!-- row -->
@@ -138,14 +161,12 @@
     <div class="container">
         <div class="row">
             <div class="gallery-container">
-                <h3 class="title"><span>TD & K</span> Gadisi Foundation Gallery</h3>
+                <h3 class="title">Gallery</h3>
                 <div class="gallery">
                     <!-- Your gallery images here -->
-                        {% for image_filename in image_filenames %}
-                            <div class="gallery-inner">
-                                <img src="{{ url_for('static', filename=image_filename) }}"  alt="{{ NO }}">
+                            <div id="GalleryContainer" class="gallery-inner">
+                                <img id="galleryImage" src="{{ url_for('static', filename=image_filename) }}" class="img-fluid" style="visibility: visible" animation-duration: 3s; animation-delay: 0.5s; animation-name: fadeInRightBig;  alt="{{ NO }}">
                             </div>
-                        {% endfor %}
                 </div>
             </div>
         </div>

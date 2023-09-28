@@ -1525,20 +1525,3 @@ p {
     color: #fff; }
 
 
-/* CSS for gallery container */
-.gallery-container {
-    height: 360px; /* Adjust the height as needed */
-    overflow: scroll;
-}
-
-/* CSS for gallery images */
-.gallery {
-    display: flex; /* Display images in a row */
-}
-
-.gallery img {
-    max-width: 600px; /* Ensure images don't overflow the container */
-    max-height: 350px;
-    margin-right: 10px; /* Add some spacing between images */
-    margin-left: 0px; /* Add some spacing between images */
-}
