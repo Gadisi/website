@@ -35,7 +35,6 @@
             imageContainer.innerHTML = ''; // Clear previous images
             imageContainer.appendChild(img);
         }
-
         // Attach the click event handler to the button
         const loadImageBtn = document.getElementById("galleryImage");
         loadImageBtn.addEventListener("click", loadImage);
@@ -191,7 +190,7 @@
                 <div class="col-lg-4 col-md-12 col-sm-12">
                     <div class="single-services text-center mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
                         <div class="services-icon">
-                            <img class="shape" src="{{ url_for('static', filename='images/upliftment.avif') }}" width="500" height="250" alt="shape">
+                            <img class="shape" src="{{ url_for('static', filename='images/im/upliftment.jpg') }}" width="500" height="250" alt="shape">
                             <i class="lni-hand"></i>
                         </div>
                         <div class="services-content mt-30">
@@ -223,7 +222,7 @@
                 <div class="col-lg-4 col-md-12 col-sm-12">
                     <div class="single-services text-center mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.8s">
                         <div class="services-icon">
-                            <img class="shape" src="{{ url_for('static', filename='images/giving.avif') }}" width="500" height="250" alt="shape">
+                            <img class="shape" src="{{ url_for('static', filename='images/im/giving.jpg') }}" width="500" height="250" alt="shape">
                             <i class="fa fa-heart"></i>
                         </div>
                         <div class="services-content mt-30">
