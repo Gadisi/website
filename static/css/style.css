@@ -1516,3 +1516,19 @@ p {
   display: none; }
   .back-to-top:hover {
     color: #fff; }
+
+/* CSS for gallery container */
+.gallery-container {
+    height: 400px; /* Adjust the height as needed */
+    overflow: auto;
+}
+
+/* CSS for gallery images */
+.gallery {
+    display: flex; /* Display images in a row */
+}
+
+.gallery img {
+    max-width: 100%; /* Ensure images don't overflow the container */
+    margin-right: 10px; /* Add some spacing between images */
+}

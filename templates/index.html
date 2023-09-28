@@ -3,12 +3,10 @@
 
 <head>
     <meta charset="utf-8">
-
     <!--====== Title ======-->
     <title>TD & K Gadisi Foundation - Community OutReach Program</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <link rel="shortcut icon" href="{{ url_for('static', filename='images/logo.ico') }}" type="image/ico">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/animate.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/magnific-popup.css') }}">
@@ -18,8 +16,8 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/default.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-</head>
 
+</head>
 <body>
     <!--[if IE]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
@@ -135,10 +133,29 @@
             </div>
         </div> <!-- row -->
     </div> <!-- container -->
-    <div class="about-shape-1">
-        <img src="{{ url_for('static', filename='images/about-shape-1.svg') }}" alt="shape">
-    </div>
 </section>
+
+    <section id="gallery" class="about-area pt-70">
+        <div class="container">
+            <div class="row">
+             <div class="gallery-container">
+                <div class="gallery">
+                    <div class="row">
+                        {% for image_filename in image_filenames %}
+                            <div class="col-lg-3 col-md-3 col-sm-12">
+                                <img src="{{ url_for('static', filename=image_filename) }}" width="600" height="350" alt="{{ NO }}">
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="gallery-navigation">
+                    <span class="prev-arrow">&#9664;</span>
+                    <span class="next-arrow">&#9654;</span>
+                </div>
+             </div>
+            </div>
+        </div>
+    </section>
 
     <section id="values" class="services-area pt-120">
         <div class="container">
