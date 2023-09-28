@@ -317,7 +317,7 @@
                 <div class="col-lg-6 col-md-12 col-sm-12">
                     <div class="single-team text-center mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
                         <div class="team-image">
-                            <img src="{{ url_for('static', filename='images/team-1.png') }}" alt="Team">
+{#                            <img src="{{ url_for('static', filename='images/team-1.png') }}" alt="Team">#}
                             <div class="social">
                                 <ul>
                                     <li><a href="#"><i class="lni-facebook-filled"></i></a></li>
@@ -338,7 +338,7 @@
                 <div class="col-lg-4 col-md-12 col-sm-12">
                     <div class="single-team text-center mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
                         <div class="team-image">
-                            <img src="{{ url_for('static', filename='images/team-2.png') }}" alt="Team">
+{#                            <img src="{{ url_for('static', filename='images/team-2.png') }}" alt="Team">#}
                             <div class="social">
                                 <ul>
                                     <li><a href="#"><i class="lni-facebook-filled"></i></a></li>
@@ -403,13 +403,14 @@
                     <div id="contact" class="col-lg-6 col-md-6 col-sm-12">
                         <div class="footer-contact mt-50 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.8s">
                             <div class="footer-title">
-                                <h4 class="title">Contact Us</h4>
+                                <h4 class="title">Address</h4>
                             </div>
-                            <ul class="contact">
-                                <li><a href="tel:0825134061" class="font-weight-bold text-white">082 513 4061</a></li>
-                                <li><a href="mailto:info@tdkgadisifoundation.com" class="font-weight-bold text-white">info@tdkgadisifoundation.com</a></li>
+                            <ul class="text-white">
                                 <li><a href="{{ url_for('home.get_home') }}" class="font-weight-bold text-white">https://tdkgadisifoundation.com</a></li>
-                                <li>581 Cedar Creek<br> First Road, Ext 8 Needwood, Gauteng 2021, South Africa</li>
+                                <li>581 Cedar Creek</li>
+                                <li>First Road, Ext 8 Needwood</li>
+                                <li>Gauteng 2021</li>
+                                <li>South Africa</li>
                             </ul>
                         </div> <!-- footer contact -->
                     </div>
