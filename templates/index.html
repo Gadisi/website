@@ -3,9 +3,15 @@
 
 <head>
     <meta charset="utf-8">
-    <title>TD & K Gadisi Foundation - Community OutReach Program</title>
+    <title>TD & K Gadisi Foundation - Community Outreach Program</title>
     <meta name="description" content="The TD & K Gadisi Foundation is a non-profit organization and platform dedicated to the noble mission of enhancing the quality of life for impoverished and marginalized communities">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes"> <!-- Enables full-screen mode on iOS -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="default"> <!-- Sets the status bar style on iOS -->
+
+    <!-- Add the following two meta tags to configure the web app's appearance on iOS -->
+    <link rel="apple-touch-icon" href="{{ url_for('static', filename='images/apple-touch-icon.png') }}">
+    <meta name="apple-mobile-web-app-title" content="TD&K Foundation"> <!-- Define the app's name on iOS home screen -->
 
     <link rel="shortcut icon" href="{{ url_for('static', filename='images/logo.ico') }}" type="image/ico">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/animate.css') }}">
@@ -17,6 +23,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/default.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
+
 <body>
     <!--[if IE]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
