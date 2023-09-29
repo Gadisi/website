@@ -3,7 +3,6 @@
 
 <head>
     <meta charset="utf-8">
-    <!--====== Title ======-->
     <title>TD & K Gadisi Foundation - Community OutReach Program</title>
     <meta name="description" content="The TD & K Gadisi Foundation is a non-profit organization and platform dedicated to the noble mission of enhancing the quality of life for impoverished and marginalized communities">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -169,7 +168,6 @@
                     <div class="single-services text-center mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
                         <div class="services-icon">
                             <img class="shape" src="{{ url_for('static', filename='images/upliftment.avif') }}" width="500" height="250" alt="shape">
-                            <i class="lni-hand"></i>
                         </div>
                         <div class="services-content mt-30">
                             <h4 class="services-title"><a href="#">Upliftment</a></h4>
@@ -200,7 +198,6 @@
                     <div class="single-services text-center mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.8s">
                         <div class="services-icon">
                             <img class="shape" src="{{ url_for('static', filename='images/giving.avif') }}" width="500" height="250" alt="shape">
-
                         </div>
                         <div class="services-content mt-30">
                             <h4 class="services-title"><a href="#">Giving to Community</a></h4>
@@ -307,7 +304,6 @@
                     <div class="section-title text-center pb-30">
                         <h3 class="title">Contact Us</h3>
                         <div class="line m-auto"></div>
-{#                        <h3 class="title"><span>TD & K</span> Gadisi Foundation</h3>#}
                     </div> <!-- section title -->
                 </div>
             </div> <!-- row -->
@@ -315,7 +311,6 @@
                 <div class="col-lg-6 col-md-12 col-sm-12">
                     <div class="single-team text-center mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
                         <div class="team-image">
-{#                            <img src="{{ url_for('static', filename='images/team-1.png') }}" alt="Team">#}
                             <div class="social">
                                 <ul>
                                     <li><a href="#"><i class="lni-facebook-filled"></i></a></li>
@@ -327,13 +322,19 @@
                         </div>
                         <div class="team-content">
                             <h5 class="holder-name"><a href="#">Sam Ratshivhanda</a></h5>
-
-                            <p class="text"><a href="tel:0795875693" class="font-weight-bold text-dark">079 587 5693</a></p>
-                            <p class="text"><a href="mailto:sam.tdkgadisifoundation@gmail.com" class="font-weight-bold text-dark">sam.tdkgadisifoundation@gmail.com</a></p>
+                            <p class="text">
+                                <a href="tel:0795875693" class="font-weight-bold text-dark">
+                                    <i class="lni-phone"> </i>
+                                079 587 5693
+                            </a></p>
+                            <p class="text"><a href="mailto:sam.tdkgadisifoundation@gmail.com" class="font-weight-bold text-dark">
+                                <i class="lni-envelope"> </i>
+                                sam.tdkgadisifoundation@gmail.com
+                            </a></p>
                         </div>
                     </div> <!-- single team -->
                 </div>
-                <div class="col-lg-4 col-md-12 col-sm-12">
+                <div class="col-lg-6 col-md-12 col-sm-12">
                     <div class="single-team text-center mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
                         <div class="team-image">
 {#                            <img src="{{ url_for('static', filename='images/team-2.png') }}" alt="Team">#}
@@ -348,8 +349,12 @@
                         </div>
                         <div class="team-content">
                             <h5 class="holder-name"><a href="#">Richard Takalani</a></h5>
-                            <p class="text"><a href="tel:0825134061" class="font-weight-bold text-dark">082 513 4061</a></p>
-                            <p class="text"><a href="mailto:Takalani.tdkgadisifoundation@gmail.com" class="font-weight-bold text-dark">Takalani.tdkgadisifoundation@gmail.com</a></p>
+                            <p class="text"><a href="tel:0825134061" class="font-weight-bold text-dark">
+                                <i class="lni-phone"> </i>
+                                082 513 4061
+                            </a></p>
+                            <p class="text"><a href="mailto:Takalani.tdkgadisifoundation@gmail.com" class="font-weight-bold text-dark">
+                                <i class="lni-envelope"> </i> Takalani.tdkgadisifoundation@gmail.com </a></p>
                         </div>
 
                     </div> <!-- single team -->
@@ -426,10 +431,8 @@
         <div id="particles-2"></div>
     </footer>
     <a href="#" class="back-to-top"><i class="lni-chevron-up"></i></a>
-    <!--====== Jquery js ======-->
     <script src="{{ url_for('static', filename='js/vendor/jquery-1.12.4.min.js') }}"></script>
     <script src="{{ url_for('static', filename='js/vendor/modernizr-3.7.1.min.js') }}"></script>
-    <!--====== Bootstrap js ======-->
     <script src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
     <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
     <script src="{{ url_for('static', filename='js/plugins.js') }}"></script>
