@@ -5,8 +5,9 @@
     <meta charset="utf-8">
     <!--====== Title ======-->
     <title>TD & K Gadisi Foundation - Community OutReach Program</title>
-    <meta name="description" content="">
+    <meta name="description" content="The TD & K Gadisi Foundation is a non-profit organization and platform dedicated to the noble mission of enhancing the quality of life for impoverished and marginalized communities">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <link rel="shortcut icon" href="{{ url_for('static', filename='images/logo.ico') }}" type="image/ico">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/animate.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/magnific-popup.css') }}">
@@ -16,29 +17,6 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/default.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-    <script>
-        function getRandomIItem(arr) {
-              const randomIndex = Math.floor(Math.random() * arr.length);
-              return arr[randomIndex];
-        }
-        // Function to load an image
-        function loadImage() {
-            // Create a new image element
-            let img = new Image();
-            const images = ['images/gallery/image_1.jpg', 'images/gallery/image_2.jpg', 'images/gallery/image_3.jpg', 'images/gallery/image_4.jpg'];
-            // Set the source of the image
-            img.src = getRandomIItem(images); // Replace with your image URL
-            img.id = "galleryImage";
-
-            // Add the image to the image container
-            const imageContainer = document.getElementById("GalleryContainer");
-            imageContainer.innerHTML = ''; // Clear previous images
-            imageContainer.appendChild(img);
-        }
-        // Attach the click event handler to the button
-        const loadImageBtn = document.getElementById("galleryImage");
-        loadImageBtn.addEventListener("click", loadImage);
-    </script>
 </head>
 <body>
     <!--[if IE]>
@@ -190,7 +168,7 @@
                 <div class="col-lg-4 col-md-12 col-sm-12">
                     <div class="single-services text-center mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
                         <div class="services-icon">
-                            <img class="shape" src="{{ url_for('static', filename='images/im/upliftment.jpg') }}" width="500" height="250" alt="shape">
+                            <img class="shape" src="{{ url_for('static', filename='images/upliftment.avif') }}" width="500" height="250" alt="shape">
                             <i class="lni-hand"></i>
                         </div>
                         <div class="services-content mt-30">
@@ -207,8 +185,7 @@
                 <div class="col-lg-4 col-md-12 col-sm-12">
                     <div class="single-services text-center mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
                         <div class="services-icon">
-{#                            <img class="shape" src="{{ url_for('static', filename='images/helping.avif') }}" width="500" height="250" alt="shape">#}
-{#                            <i class="lni-users"></i>#}
+                            <img class="shape" src="{{ url_for('static', filename='images/helping.avif') }}" width="500" height="250" alt="shape">
                         </div>
                         <div class="services-content mt-30">
                             <h4 class="services-title"><a href="#">Compassion</a></h4>
@@ -222,8 +199,8 @@
                 <div class="col-lg-4 col-md-12 col-sm-12">
                     <div class="single-services text-center mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.8s">
                         <div class="services-icon">
-                            <img class="shape" src="{{ url_for('static', filename='images/im/giving.jpg') }}" width="500" height="250" alt="shape">
-                            <i class="fa fa-heart"></i>
+                            <img class="shape" src="{{ url_for('static', filename='images/giving.avif') }}" width="500" height="250" alt="shape">
+
                         </div>
                         <div class="services-content mt-30">
                             <h4 class="services-title"><a href="#">Giving to Community</a></h4>
