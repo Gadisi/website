@@ -3,15 +3,26 @@
 
 <head>
     <meta charset="utf-8">
-    <title>TD & K Gadisi Foundation - Community Outreach Program</title>
+    <title>TD & K Gadisi Foundation</title>
+     <link rel="manifest" href="{{ url_for('static', filename='manifest/manifest.webmanifest')}}">
     <meta name="description" content="The TD & K Gadisi Foundation is a non-profit organization and platform dedicated to the noble mission of enhancing the quality of life for impoverished and marginalized communities">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
     <meta name="apple-mobile-web-app-capable" content="yes"> <!-- Enables full-screen mode on iOS -->
     <meta name="apple-mobile-web-app-status-bar-style" content="default"> <!-- Sets the status bar style on iOS -->
 
     <!-- Add the following two meta tags to configure the web app's appearance on iOS -->
-    <link rel="apple-touch-icon" href="{{ url_for('static', filename='images/apple-touch-icon.png') }}">
-    <meta name="apple-mobile-web-app-title" content="TD&K Foundation"> <!-- Define the app's name on iOS home screen -->
+    <link rel="apple-touch-icon" href="{{ url_for('static', filename='images/logo-bg.png') }}">
+    <meta name="apple-mobile-web-app-title" content="TD & K Gadisi Foundation"> <!-- Define the app's name on iOS home screen -->
+
+    <!-- Enable web app functionality on Android -->
+    <meta name="mobile-web-app-capable" content="yes"> <!-- Enable full-screen mode on Android -->
+    <link rel="icon" sizes="192x192" href="{{ url_for('static', filename='images/logo-bg.png') }}"> <!-- Specify the Android app icon -->
+
+        <!-- Enable web app functionality on Windows desktop -->
+    <meta name="msapplication-TileImage" content="{{ url_for('static', filename='images/logo-bg.png') }}"> <!-- Specify the Windows tile icon -->
+    <meta name="msapplication-TileColor" content="#0078d4"> <!-- Specify the Windows tile color -->
 
     <link rel="shortcut icon" href="{{ url_for('static', filename='images/logo.ico') }}" type="image/ico">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/animate.css') }}">
@@ -453,5 +464,6 @@
     <script src="{{ url_for('static', filename='js/wow.min.js') }}"></script>
     <script src="{{ url_for('static', filename='js/particles.min.js') }}"></script>
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/sw.js') }}"></script>
 </body>
 </html>
