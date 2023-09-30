@@ -462,7 +462,7 @@
     <script src="{{ url_for('static', filename='js/wow.min.js') }}"></script>
     <script src="{{ url_for('static', filename='js/particles.min.js') }}"></script>
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
-{#    <script src="{{ url_for('static', filename='js/sw.js') }}"></script>#}
+
 <script>
 document.addEventListener("DOMContentLoaded", function () {
     const imageUrls = [
@@ -522,6 +522,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 </script>
-
+    <script src="{{ url_for('static', filename='js/sw.js') }}"></script>
 </body>
 </html>
