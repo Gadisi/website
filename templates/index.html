@@ -153,23 +153,21 @@
         </div> <!-- row -->
     </div> <!-- container -->
 </section>
-<section id="gallery" class="about-image text-center mt-50 wow fadeInRightBig" data-wow-duration="3s" data-wow-delay="0.7s" style="visibility: visible; animation-duration: 3s; animation-delay: 0.5s; animation-name: fadeInRightBig;"">
+<section id="gallery" class="about-image text-center mt-50 wow fadeInRightBig" data-wow-duration="3s" data-wow-delay="0.7s" style="visibility: visible; animation-duration: 3s; animation-delay: 0.5s; animation-name: fadeInRightBig;">
     <div class="container">
         <div class="row">
-            <div class="gallery-container">
-                <h3 class="title">Gallery</h3>
-                <div class="gallery">
-                    <!-- Your gallery images here -->
-                            <div id="GalleryContainer" class="gallery-inner">
-                                <img id="galleryImage" src="{{ url_for('static', filename=image_filename) }}" class="img-fluid" style="visibility: visible" animation-duration: 3s; animation-delay: 0.5s; animation-name: fadeInRightBig;  alt="{{ NO }}">
-                            </div>
-                </div>
-            </div>
+
+             <h3 class="title">Gallery</h3>
+               <div class="video-wrapper">
+                    <div class="video-image">
+                        <img id="galleryImage" src="{{ url_for('static', filename=image_filename) }}" class="img-fluid" style="visibility: visible" animation-duration: 3s; animation-delay: 0.5s; animation-name: fadeInRightBig;  alt="GadisiFoundation">
+                    </div>
+                </div> <!-- video wrapper -->
         </div>
     </div>
 </section>
 
-    <section id="values" class="services-area pt-120">
+<section id="values" class="services-area pt-120">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-10">
@@ -464,7 +462,66 @@
     <script src="{{ url_for('static', filename='js/wow.min.js') }}"></script>
     <script src="{{ url_for('static', filename='js/particles.min.js') }}"></script>
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/sw.js') }}"></script>
+{#    <script src="{{ url_for('static', filename='js/sw.js') }}"></script>#}
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const imageUrls = [
+        {% for i in range(1, 32) %}
+            "{{ url_for('static', filename='images/gallery/image_' + i|string + '.jpg') }}",
+        {% endfor %}
+    ];
+    const modalImage = document.getElementById('galleryImage');
+    let currentIndex = 0;
+    const loadedImages = [];
+   function getRandomIndex(max) {
+            return Math.floor(Math.random() * max);
+        }
+    // Function to show the next image in the slideshow
+    function showNextImage() {
+        const nextIndex = getRandomIndex(imageUrls.length);
+        const imageUrl = imageUrls[nextIndex];
+
+        // Check if the image has already been loaded successfully
+        if (loadedImages[nextIndex]) {
+            modalImage.src = imageUrl;
+            modalImage.className = "img-fluid";
+            modalImage.style.visibility = "visible";
+            modalImage.style.animationDuration = "3s";
+            modalImage.style.animationDelay = "0.5s";
+            modalImage.style.animationName = "fadeInRightBig";
+            modalImage.alt = "GadisiFoundation";
+            currentIndex++;
+            return;
+        }
+
+        const img = new Image();
+        img.src = imageUrl;
+
+        // Check if the image can be loaded successfully
+        img.onload = function () {
+            modalImage.src = imageUrl;
+            modalImage.className = "img-fluid";
+            modalImage.style.visibility = "visible";
+            modalImage.style.animationDuration = "3s";
+            modalImage.style.animationDelay = "0.5s";
+            modalImage.style.animationName = "fadeInRightBig";
+            modalImage.alt = "GadisiFoundation";
+            currentIndex++;
+            loadedImages[nextIndex] = true; // Mark the image as loaded
+        };
+
+        // If the image fails to load, you can handle it here
+        img.onerror = function () {
+            console.error("Failed to load image:", imageUrl);
+            currentIndex++; // Proceed to the next image even if loading fails
+        };
+    }
+
+    // Start the automatic slideshow
+    setInterval(showNextImage, 3000); // Change image every 3 seconds (adjust the interval as needed)
+});
+
+</script>
 
 </body>
 </html>
