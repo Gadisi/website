@@ -121,7 +121,7 @@
 
                     <div class="tab-pane fade show active" id="add" role="tabpanel" aria-labelledby="add-tab">
 
-                        <form action="/add_project" method="POST">
+                        <form action="{{ url_for('home.add_project') }}" method="POST" enctype="multipart/form-data">
                             <div class="card">
                                 <div class="card-header">
                                     <h5 class="card-title">Complete the form below into to create a new project</h5>
@@ -147,7 +147,10 @@
                                 <!-- Add more project fields here as needed -->
                             <div class="card-footer">
                                 <div class="form-group">
-                                    <button type="submit" class="btn btn-primary">Add Project</button>
+                                    <button type="submit" class="btn btn-primary">
+                                        <i class="lni-save"> </i>
+                                        Add Project
+                                    </button>
                                 </div>
                             </div>
 
@@ -161,15 +164,16 @@
                             </div>
                             <div class="card-body">
                                 <div class="row">
-                                    {% for project in projects %}
+                                    {% for project in projects_list %}
                                         <div class="card">
                                             <div class="card-header">
                                                 <h4 class="card-title">{{ project.project_name }}</h4>
                                             </div>
-                                            <img class="img-fluid" src="{{ project.image_url }}">
+                                            <img class="img-fluid" src="{{ url_for('static', filename='uploads/' + project.filename) }}">
                                             <div class="card-body">
                                                 {{ project.introduction }}
                                             </div>
+
                                             <div class="card-footer">
                                                 <a href="#" class="text-danger">Delete</a>
                                             </div>

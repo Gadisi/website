@@ -1,6 +1,6 @@
-from sqlalchemy import Column, Integer, inspect, LargeBinary, Text
+from sqlalchemy import Column, Integer, inspect, Text, String
 
-from database import Base, engine
+from src.database import Base, engine
 
 
 class ProjectsORM(Base):
@@ -10,7 +10,7 @@ class ProjectsORM(Base):
     project_name = Column(Text)
     introduction = Column(Text)
     description = Column(Text)
-    image = Column(LargeBinary)
+    filename = Column(Text)
 
     @classmethod
     def create_if_not_table(cls):
@@ -23,6 +23,7 @@ class ProjectsORM(Base):
             'project_name': self.project_name,
             'introduction': self.introduction,
             'description': self.description,
+            'filename': self.filename,
             # You may want to exclude the image attribute from the dictionary
             # 'image': self.image
         }

@@ -2,10 +2,10 @@
 
 from sqlalchemy import Column, Integer, String, inspect
 
-from database import Base, engine
+from src.database import Base, engine
 
 
-class Users(Base):
+class UsersORM(Base):
     __tablename__ = 'users'
 
     id = Column(Integer, primary_key=True)

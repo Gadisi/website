@@ -7,3 +7,7 @@ def static_folder() -> str:
 
 def template_folder() -> str:
     return path.join(path.dirname(path.abspath(__file__)), '../../templates')
+
+
+def upload_folder() -> str:
+    return path.join(static_folder(), 'uploads')
