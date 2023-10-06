@@ -1,0 +1,67 @@
+<header class="header-area">
+        <div class="navbar-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <nav class="navbar navbar-expand-lg">
+                            <a class="navbar" href="{{ url_for('home.get_home') }}">
+                                <img src="{{ url_for('static', filename='images/logo-bg.png') }}" width="80" height="45" alt="TDK Foundation">
+                            </a>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
+                                <ul id="nav" class="navbar-nav ml-auto">
+                                    <li class="nav-item active">
+                                        <a class="page-scroll" href="#home">HOME</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="page-scroll" href="#about">ABOUT</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="page-scroll" href="#values">VALUES</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="page-scroll" href="#wedo">WHAT WE DO</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="page-scroll" href="#how">HOW WE WORK</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="page-scroll" href="#gallery">GALLERY</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="page-scroll" href="#contact">CONTACT</a>
+                                    </li>
+                                </ul>
+                            </div> <!-- navbar collapse -->
+                        </nav> <!-- navbar -->
+
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+        </div> <!-- navbar area -->
+    <div id="home" class="header-hero bg_cover" style="background-image: url({{ url_for('static', filename='images/gadisi/banner.jpg') }})">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="header-hero-content text-center">
+                        <h3 class="header-sub-title wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">TD & K Gadisi Foundation</h3>
+                        <h2 class="header-title wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.5s">Community Out-Reach & Giving Back</h2>
+                        <p class="text wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.8s">A Non Profit Organisation, The Platform Aim is Community Out Reach and Giving Back </p>
+                    </div> <!-- header hero content -->
+                </div>
+            </div> <!-- row -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="header-hero-image text-center wow fadeIn" data-wow-duration="1.3s" data-wow-delay="1.4s">
+{#                            <img src="{{ url_for('static', filename='images/banner.jpg') }}" alt="hero">#}
+                    </div> <!-- header hero image -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+        <div id="particles-1" class="particles"></div>
+    </div> <!-- header hero -->
+    </header>

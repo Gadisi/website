@@ -1,0 +1,116 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    {% include 'layout/head.html' %}
+</head>
+
+<body>
+    <!--[if IE]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+    <div class="preloader">
+        <div class="loader">
+            <div class="ytp-spinner">
+                <div class="ytp-spinner-container">
+                    <div class="ytp-spinner-rotator">
+                        <div class="ytp-spinner-left">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                        <div class="ytp-spinner-right">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <header class="header-area">
+        <div class="navbar-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <nav class="navbar navbar-expand-lg">
+                            <a class="navbar" href="{{ url_for('home.get_home') }}">
+                                <img src="{{ url_for('static', filename='images/logo-bg.png') }}" width="80" height="45" alt="TDK Foundation">
+                            </a>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
+                                <ul id="nav" class="navbar-nav ml-auto">
+                                    <li class="nav-item active">
+                                        <a class="page-scroll" href="{{ url_for('home.get_home') }}">HOME</a>
+                                    </li>
+                                </ul>
+                            </div> <!-- navbar collapse -->
+                        </nav> <!-- navbar -->
+
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+        </div> <!-- navbar area -->
+    <div id="home" class="header-hero bg_cover" style="background-image: url({{ url_for('static', filename='images/gadisi/banner.jpg') }})">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="header-hero-content text-center">
+                        <h3 class="header-sub-title wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">TD & K Gadisi Foundation</h3>
+                        <h2 class="header-title wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.5s">Community Out-Reach & Giving Back</h2>
+                        <p class="text wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.8s">A Non Profit Organisation, The Platform Aim is Community Out Reach and Giving Back </p>
+                    </div> <!-- header hero content -->
+                </div>
+            </div> <!-- row -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="header-hero-image text-center wow fadeIn" data-wow-duration="1.3s" data-wow-delay="1.4s">
+{#                            <img src="{{ url_for('static', filename='images/banner.jpg') }}" alt="hero">#}
+                    </div> <!-- header hero image -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+        <div id="particles-1" class="particles"></div>
+    </div> <!-- header hero -->
+    </header>
+    <section id="about" class="about-area pt-70">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="about-content mt-50 wow fadeInLeftBig" data-wow-duration="1s" data-wow-delay="0.5s">
+                    <div class="section-title">
+                        <h2 class="title">Login</h2>
+                        <div class="line"></div>
+{#                        <h3 class="title">TD & K <span>Gadisi Foundation</span></h3>#}
+                    </div> <!-- section title -->
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label class="subscribe-title">Username</label>
+                            <input type="text" class="form-control" name="username">
+                        </div>
+                        <div class="form-group">
+                            <label class="subscribe-title">Password</label>
+                            <input type="password" class="form-control" name="password" />
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-lg btn-primary">Login</button>
+                            <button type="reset" class="btn btn-lg btn-warning">Cancel</button>
+                        </div>
+                    </form>
+
+                </div> <!-- about content -->
+            </div>
+            <div class="col-lg-6">
+                <div class="about-image text-center mt-50 wow fadeInRightBig" data-wow-duration="1s" data-wow-delay="0.5s">
+                    <img  src="{{ url_for('static', filename='images/about.jpg') }}" width="600" height="350" alt="about">
+                </div> <!-- about image -->
+            </div>
+        </div> <!-- row -->
+    </div> <!-- container -->
+</section>
+
+{% include 'layout/scripts.html' %}
+
+</body>
+</html>
