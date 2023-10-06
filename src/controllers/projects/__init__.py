@@ -28,3 +28,16 @@ class ProjectController(Controllers):
             session.commit()
             return True
 
+    def delete_project(self, _id: int):
+        with self.get_session() as session:
+            # Query the project by its ID
+            project_to_delete = session.query(ProjectsORM).filter_by(id=_id).first()
+
+            if project_to_delete:
+                # If the project exists, delete it
+                session.delete(project_to_delete)
+                session.commit()
+                return True  # Return True to indicate successful deletion
+            else:
+                # If the project doesn't exist, return False to indicate failure
+                return False
