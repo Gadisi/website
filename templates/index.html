@@ -27,6 +27,9 @@
     {% include 'sections/header.html' %}
     {% include 'sections/about.html' %}
     {% include 'sections/gallery.html' %}
+    {% if projects_list %}
+        {% include 'sections/projects.html' %}
+    {% endif %}
     {% include 'sections/values.html' %}
     {% include 'sections/whawedo.html' %}
     {% include 'sections/how.html' %}

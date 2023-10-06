@@ -1,0 +1,35 @@
+
+
+
+
+<section id="projects" class="about-image text-center mt-50 wow fadeInRightBig" data-wow-duration="3s" data-wow-delay="0.7s" style="visibility: visible; animation-duration: 3s; animation-delay: 0.5s; animation-name: fadeInRightBig;">
+    <div class="container">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">TD & K Gadisi Foundation Projects</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    {% for project in projects_list %}
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <h4 class="card-title">{{ project.project_name }}</h4>
+                                            </div>
+                                            <img class="img-fluid" src="{{ url_for('static', filename='uploads/' + project.filename) }}">
+                                            <div class="card-body">
+                                                {{ project.introduction }}
+                                            </div>
+
+                                            <div class="card-footer">
+                                                <span>
+                                                    {{ project.description }}
+                                                </span>
+                                            </div>
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                        </div>
+                    </div>
+
+    </div>
+</section>
