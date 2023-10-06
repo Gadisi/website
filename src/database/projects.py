@@ -3,7 +3,7 @@ from sqlalchemy import Column, Integer, inspect, LargeBinary, Text
 from database import Base, engine
 
 
-class Projects(Base):
+class ProjectsORM(Base):
     __tablename__ = 'projects'
 
     id = Column(Integer, primary_key=True)
@@ -17,3 +17,12 @@ class Projects(Base):
         if not inspect(engine).has_table(cls.__tablename__):
             Base.metadata.create_all(bind=engine)
 
+    def to_dict(self):
+        return {
+            'id': self.id,
+            'project_name': self.project_name,
+            'introduction': self.introduction,
+            'description': self.description,
+            # You may want to exclude the image attribute from the dictionary
+            # 'image': self.image
+        }
