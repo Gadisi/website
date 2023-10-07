@@ -11,7 +11,7 @@ class ProjectController(Controllers):
 
     async def get_projects(self) -> list[dict[str, str]]:
         with self.get_session() as session:
-            projects = session.query(ProjectsORM).all()
+            projects: list[ProjectsORM] = session.query(ProjectsORM).all()
             return [project.to_dict() for project in projects]
 
     @staticmethod
@@ -19,14 +19,14 @@ class ProjectController(Controllers):
         """
         :return:
         """
-        filename = path.join(upload_folder(), filename)
+        filename: str = path.join(upload_folder(), filename)
         return filename
 
     async def add_project(self, project_data: CreateProject) -> str:
         with self.get_session() as session:
             # Create an instance of ProjectsORM using the project_data dictionary
             image_src: str = await self.create_image_src(filename=project_data.filename)
-            new_project = ProjectsORM(**project_data.dict())
+            new_project: ProjectsORM = ProjectsORM(**project_data.dict())
             session.add(new_project)
             session.commit()
             return image_src
