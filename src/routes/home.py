@@ -1,11 +1,9 @@
-
 import random
 from pydantic import ValidationError
 from flask import Blueprint, render_template, request
 
 from src.database.models import CreateProject
 from src.main import projects
-
 
 home_route = Blueprint('home', __name__)
 
@@ -62,3 +60,18 @@ async def add_project():
     context: dict[str, list[dict[str, str]]] = dict(projects_list=project_list)
     return render_template('admin/admin.html', **context)
 
+
+@home_route.get('/admin/project/<string:project_id>')
+async def delete_project(project_id: str):
+    """
+
+    :param project_id:
+    :return:
+    """
+    is_deleted = await projects.delete_project(_id=project_id)
+    if not is_deleted:
+        return "Could not Delete Project: Project may already be deleted"
+
+    project_list: list[dict[str, str]] = await projects.get_projects()
+    context: dict[str, list[dict[str, str]]] = dict(projects_list=project_list)
+    return render_template('admin/admin.html', **context)

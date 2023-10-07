@@ -175,8 +175,12 @@
                                             </div>
 
                                             <div class="card-footer">
-                                                <a href="#" class="text-danger">Delete</a>
+                                                <a href="{{ url_for('home.delete_project', project_id=project.id) }}" class="btn btn-danger btn-sm">
+                                                    <i class="lni-cut"> </i>
+                                                    Delete
+                                                </a>
                                             </div>
+
                                         </div>
                                     {% endfor %}
                                 </div>
