@@ -38,6 +38,9 @@ async def admin():
 async def add_project():
     try:
         uploaded_file = request.files['image']
+        if not uploaded_file:
+            return f"Validation error: {str(e)}"
+
         project_data = CreateProject(
             project_name=request.form.get('project_name'),
             introduction=request.form.get('introduction'),
@@ -45,11 +48,7 @@ async def add_project():
             filename=uploaded_file.filename,
         )
 
-        # Access project_data.file_data to work with the file content
-
-        # The rest of your code for handling the validated data
-
-        image_path = await projects.add_project(project_data=project_data)
+        image_path: str = await projects.add_project(project_data=project_data)
 
         if image_path:
             uploaded_file.save(image_path)

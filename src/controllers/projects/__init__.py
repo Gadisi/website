@@ -14,9 +14,9 @@ class ProjectController(Controllers):
             projects = session.query(ProjectsORM).all()
             return [project.to_dict() for project in projects]
 
-    async def create_image_src(self, filename: str) -> str:
+    @staticmethod
+    async def create_image_src(filename: str) -> str:
         """
-
         :return:
         """
         filename = path.join(upload_folder(), filename)
@@ -26,17 +26,8 @@ class ProjectController(Controllers):
         with self.get_session() as session:
             # Create an instance of ProjectsORM using the project_data dictionary
             image_src: str = await self.create_image_src(filename=project_data.filename)
-            new_project = ProjectsORM(
-                project_name=project_data.project_name,
-                introduction=project_data.introduction,
-                description=project_data.description,
-                filename=project_data.filename
-            )
-
-            # Add the new project to the session
+            new_project = ProjectsORM(**project_data.dict())
             session.add(new_project)
-
-            # Commit the changes to the database
             session.commit()
             return image_src
 
