@@ -64,7 +64,8 @@ async def add_project():
 @home_route.get('/admin/project/<string:project_id>')
 async def delete_project(project_id: str):
     """
-
+        **delete_project**
+            
     :param project_id:
     :return:
     """
